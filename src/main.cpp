@@ -58,7 +58,7 @@ uint16_t NUM_LEDS;                                          // Number of LED's w
 uint16_t KolLed;
 #endif
 
-int max_bright = 255;                                     // Overall brightness definition. It can be changed on the fly.
+int max_bright = MAX_BRIGHTNES;                                     // Overall brightness definition. It can be changed on the fly.
 
 struct CRGB leds[MAX_LEDS];                                   // Initialize our LED array. We'll be using less in operation.
 
@@ -322,7 +322,7 @@ void loop() {
   if (btn.isStep()) {
     stepFlag = true;
     max_bright += (brightDir ? 20 : -20);
-    max_bright = constrain(max_bright, 0, 255);
+    max_bright = constrain(max_bright, 0, MAX_BRIGHTNES);
     FastLED.setBrightness(max_bright);
   }
 #endif
