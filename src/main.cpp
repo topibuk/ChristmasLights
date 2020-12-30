@@ -82,7 +82,10 @@ TBlendType currentBlending = LINEARBLEND;                     // NOBLEND or LINE
 #define ISINIT    4                                           // EEPROM location used to verify that this Arduino has been initialized
 
 #define INITVAL   0x55                                        // If this is the value in ISINIT, then the Arduino has been initialized. Startmode should be 0 and strandlength should be 
-#define INITMODE  0                                           // Startmode is 0, which is black.
+
+//FIXME: get the first mode of the array:
+#define INITMODE  1                                           // Startmode is 0, which is black.
+
 #define INITLEN   KOL_LED                                     // Start length LED's.
 #define INITDEL   0                                           // Starting mesh delay value of the strand in milliseconds.
 
